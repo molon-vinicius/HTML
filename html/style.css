@@ -1,0 +1,66 @@
+p {
+	color:white;
+	font-family: arial;
+	font-size: 14px;
+}
+
+body {
+	background-color: white;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+header{
+	background-color: #35b8b0;
+	height: 80px;	
+	padding: 20px;
+}
+
+footer {
+	clear: both;
+	background-color: #35b8b0;
+	height: 50px;
+	padding: 10px;
+	text-align: center;
+	font-family: Helvetica, Arial;
+}
+
+h1{
+	color: black;
+	text-align: center;
+	text-shadow: 2px 2px 2px #111;
+}
+
+#principal{
+	clear: both;
+	background-image: url('cidade.jpg');
+	background-size: 100%;
+	min-height: 500px;
+	padding: 80px;
+}
+
+#logo{
+	float: left;
+}
+
+#menu{
+	float: right;
+}
+
+#menu a{
+	text-decoration: none;
+	color: black;
+	text-shadow: 1px 1px  #111;
+}
+
+.container {
+	width: 920px;	
+	margin: auto;
+}
+
+.efeito{
+	background-color: rgba(0,0,0,0.5);
+}
