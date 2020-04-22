@@ -1,0 +1,143 @@
+<!DOCTYPE>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet" href="_css\estilo.css">
+    <link rel="stylesheet" href="_css\form.css">
+ </head>
+
+<script>
+function calcular(){
+		var qtd = parseInt(document.getElementById('idqtd').value);
+		var tot = qtd * 1500;
+		document.getElementById('idtotal').value = tot;
+}
+</script>
+
+<body>
+	<div id="interface">
+	<header id="cabecalho">
+		<hgroup>
+			<h1>Google Glass</h1>
+			<h2>A revolução do Google está chegando</h2>
+		</hgroup>
+	<figure>
+		<img id="icone" src="_imagens\contato.png">
+	</figure>
+	<nav id ="menu">
+		<h1>Menu Principal</h1>
+		<ul>
+			<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+			<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+			<li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+			<li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+			<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+		</ul>
+	</nav>
+	</header>
+
+	<section id="corpocontato">
+	<article id="principal">
+		<header id="article">
+		<hgroup>
+<!-- &nbsp é usado para determinar um espaço -->
+			<h3>Fale Conosco &nbsp; > &nbsp; Contato</h3>
+			<h1>Formulário de Contato</h1>
+			<h2>por Gustavo Guanabara</h2>
+			<h3>Atualizado em 01/Maio/2013</h3>
+		</hgroup>
+		</header>
+	</article>
+	</section>
+
+	<form method="post" id="formcontato" oninput="calcular();">
+		<fieldset id="user">
+			<legend>		
+	    		<p>Identificação do Usuário</p>
+	    	</legend>	
+	        	<p><label for="idnome">Nome: </label><input type="text" name="nome" id="idnome" size="22" maxlength="25" placeholder="Nome Completo"></p>
+	        	<p><label for="idsenha">Senha: </label><input type="password" name="senha" id="idsenha" size="8" maxlength="8" placeholder="Senha"></p>
+	        	<p><label for="idemail">E-mail: </label><input type="email" name="email" id="idemail" size="28" maxlenght="35" placeholder="Insira seu e-mail"></p>
+		<fieldset id="sexo">
+	       	<legend>Sexo:</legend>
+	            <input type="radio" name="sexo" id="idmasc"> <label for="idmasc">Masculino</label></br>
+	    	    <input type="radio" name="sexo" id="idfem"> <label for="idfem">Feminino</label>
+	    </fieldset>
+	    	    <p><label for="iddata">Data de Nascimento: </label><input type="date" name="data" id="iddata"></p>
+	    </fieldset></br>
+	
+		<fieldset id="endereco">
+			<legend>Endereço do Usuário</legend>
+	    	<p><label for="idlogradouro">Logradouro: </label><input type="text" name="logradouro" id="idlogradouro" size="40" maxlength="65" placeholder="Rua, Avenida, Praça, Travessia, etc.."></p>
+	    	<p><label for="idnumero">Número: </label><input type="number" name="numero" id="idnumero" size="3" min="1" max="99999"></p>
+	    	<p><label for="idcomplemento">Complemento: </label><input type="number" name="complemento" id="idcomplemento" min="1" max="99999"></p>
+	    	<p><label for="idestado">Estado: </label>
+	    		<select name="estado" id="idestado">
+				<optgroup label="Sudeste">
+	    			<option value="ES">Espírito Santo</option>
+	    			<option value="MG">Minas Gerais</option>
+	    			<option value="RJ">Rio de Janeiro</option>
+	    			<option selected value="SP">São Paulo</option>
+	    		</optgroup>
+	    		<optgroup label="Sul">
+	    			<option value="PR">Paraná</option>
+	    			<option value="RS">Rio Grande do Sul</option>
+	    			<option value="SC">Santa Catarina</option>	    		
+	    		</optgroup>	    		
+	    		</select>
+	    	<p><label for="idcidade">Cidade: </label><input type="text" name="cidade" id="idcidade" size="25" maxlength="30" placeholder="Insira aqui sua cidade" list="dlcidade"></p>	    
+	    		<datalist id="dlcidade">
+	    			<option>Niterói</option>
+	    			<option>Búzios</option>
+	    			<option>Belfort Roxo</option>
+	    			<option>Santos</option>
+	    			<option>Campinas</option>
+	    			<option>Uruguaiana</option>
+	    			<option>Itajaí</option>
+	    		</datalist>
+	    </fieldset></br>
+	
+		<fieldset id="mensagem">
+			<legend>Mensagem do Usuário</legend>
+	    	<p><label for="idurgencia">Grau de Urgência: </label><input type="range" name="urgencia" id="idurgencia" min="0" max="20" step="2"></p>
+	    	<p><label for="idmens">Mensagem: </label>
+	    		<textarea name="msg" id="idmsg" cols="45" rows="10" placeholder="Deixe aqui sua mensagem">
+	    		</textarea>
+	    	</p>	    	
+		</fieldset></br>
+	
+		<fieldset id="pedido">
+			<legend>Quero um Google Glass</legend>
+			<p><input type="checkbox" name="ped" id="idped" checked/>
+	    	<label for="ped">Gostaria de adquirir um Google Glass quando disponível</p></label>
+	    	<p>Cor: <input type="color" name="cor" id="idcor" value="#0000FF"></p>
+	    	<p>Quantidade: <input type="number" name="qtd" id="idqtd" min="0" max="10" value="0"></p>
+	    	<p>Preço Total: <b>R$ </b><input type="text" name="total" id="idtotal" size="10" maxlength="10"placeholder="Total a pagar" readonly></p>
+		</fieldset></br>
+		<input type="image" name="envio" id="idenvio" src="_imagens/botao-enviar.png"/>
+<!--
+	<input type="submit" value="Enviar"/>
+-->
+	</form>
+</br>
+<footer id="rodape"> 
+	<p>Copyright &copy; 2013 - by Gustavo Guanabara</p>
+	<p>Facebook | Twitter</p>
+</footer>
+<!--
+	a tag <pre> serve para o navegador exibir o texto na página exatamente da forma que foi digitado 
+	as tags %lt; e &gt; correspondem aos caracteres "<" e ">" sucessivamente, pois ao colocar os caracteres o html entende que é uma tag de comando
+<pre>
+<code>
+	#include &lt;iostream&gt;
+	int main (){
+	cout << "Olá."
+	return 0;
+	}
+</code>
+</pre>
+-->
+	</div>
+</body>
+</html>
